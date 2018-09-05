@@ -22,3 +22,6 @@ from apyori import apriori
 rules=apriori(transactions,min_support=0.003,min_confidence=0.2,min_lift=3,min_length=2)    
 
 res=list(rules)
+results_list = []
+for i in range(0, len(res)): 
+    results_list.append('RULE:\t' + str(res[i][0]) + '\nSUPPORT:\t' + str(res[i][1]))
